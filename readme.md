@@ -18,7 +18,8 @@ where p, q in N are nearby pixels, and Vp,q measures the interaction penalty. Dp
 
 In this project I apply the a-expansion algorithm and optimize the disparity map especially around occluded edges. The a-expansion algorithm is a fast route towards energy minimization. Multiple interaction penalty functions are being examined. 
 
-3. Method
+## Method
+
 1) Simple algorithm
 Here we assume the image provided use calibrated camaras and the epipolar line for each pixel is just it’s horizontal line. Here I use the piano-perfect image from middlebury sample dataset[middlebury]. Other images are included in the discussion session later as comparison. Ground truth is provided by the dataset, and it’s converted to png format through an online converter[pfm2png].
 
