@@ -35,7 +35,7 @@ A range of window size and depth values are tested to achieve best disparity map
 <img width="400" alt="image" src="https://github.com/zchen163/Stereo-Correspondence/assets/48006055/143d21cf-c54b-491a-a5ac-971b9659d12b">
 <img width="400" alt="image" src="https://github.com/zchen163/Stereo-Correspondence/assets/48006055/5524c93d-c253-4884-ac0a-4f7866d66681">
 
-Figure 1. Simple disparity. The left image is mapping left view to right view, and the right image is mapping right view to left view. ![image](https://github.com/zchen163/Stereo-Correspondence/assets/48006055/db41863c-39e4-4db0-9318-4bfe8133b39b)
+Figure 1. Simple disparity. The left image is mapping left view to right view, and the right image is mapping right view to left view. 
 
 2) Advanced algorithms
 
@@ -51,11 +51,11 @@ The a-expansion algorithm described in Boykov paper can be represented in the fo
 
 <img width="317" alt="image" src="https://github.com/zchen163/Stereo-Correspondence/assets/48006055/31d71ba4-e797-46d0-8282-0e042d0c5c43">
 
-Maxflow-Mincut algorithm in graph cuts is widely used to minimize energy functions of E(f) as mentioned above. So graph cuts is used to efficiently find f-hat for the key part of each algorithm in Step 3.1. This algorithm allows a large number of pixels to change their labels simultaneously. Note that here we start with not arbitrary labeling, but the label generated from simple disparity. In this study, I adopt the package pymaxflow[Pymaxflow] to calculate the graph cuts and compare the 4 penalty functions in the result. Even with a single cycle of alpha expansion the algorithm provides really good ‘smoothing’ of the disparity map. Due to the high computational cost, this study only use 1-cycle a-expansion and compare the result. ![image](https://github.com/zchen163/Stereo-Correspondence/assets/48006055/5f437737-054c-4159-958f-a950a428776a)
+Maxflow-Mincut algorithm in graph cuts is widely used to minimize energy functions of E(f) as mentioned above. So graph cuts is used to efficiently find f-hat for the key part of each algorithm in Step 3.1. This algorithm allows a large number of pixels to change their labels simultaneously. Note that here we start with not arbitrary labeling, but the label generated from simple disparity. In this study, I adopt the package pymaxflow[Pymaxflow] to calculate the graph cuts and compare the 4 penalty functions in the result. Even with a single cycle of alpha expansion the algorithm provides really good ‘smoothing’ of the disparity map. Due to the high computational cost, this study only use 1-cycle a-expansion and compare the result. 
 
 <img width="557" alt="image" src="https://github.com/zchen163/Stereo-Correspondence/assets/48006055/a9a20cbc-f157-45f0-baad-dd0d05791b55">
 
-Figure 2. Result comparison.  a) left view; b) right view; c) ground truth; d) simple disparity; e) absolute distance; f) truncated absolute distance; g) truncated squared distance; h) potts model. A representative occluded edge area is highlighted in red rectangle. ![image](https://github.com/zchen163/Stereo-Correspondence/assets/48006055/2f682274-60c4-4844-a673-04e5e5d9cd66)
+Figure 2. Result comparison.  a) left view; b) right view; c) ground truth; d) simple disparity; e) absolute distance; f) truncated absolute distance; g) truncated squared distance; h) potts model. A representative occluded edge area is highlighted in red rectangle. 
 
 3) Other images
 
