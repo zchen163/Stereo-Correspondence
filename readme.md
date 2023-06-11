@@ -1,6 +1,6 @@
 # Stereo Correspondence
 
-Edited by Chen Zhang, project finished in 2021
+* Edited by Chen Zhang, project finished in 2021. 
 
 This project aims at finding the disparity map between two views. The disparity map using simple algorithm, and a-expansion algorithm along with various penalty models are examined in this project. It is clear that the a-expansion algorithm is powerful when dealing with occluded edges. In piano case, the best disparity map is achieved under truncated squared distance model.  Different images show distinct optimization with the use of a-expansion algorithm. 
 
