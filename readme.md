@@ -1,5 +1,7 @@
 # Stereo Correspondence
 
+Edited by Chen Zhang, project finished in 2021
+
 This project aims at finding the disparity map between two views. The disparity map using simple algorithm, and a-expansion algorithm along with various penalty models are examined in this project. It is clear that the a-expansion algorithm is powerful when dealing with occluded edges. In piano case, the best disparity map is achieved under truncated squared distance model.  Different images show distinct optimization with the use of a-expansion algorithm. 
 
 ## Related work
@@ -103,12 +105,3 @@ this will generate all images for piano-related disparity map. The output images
 
 $ python other_images.py
 this will generate all images for disparity map under other topics. The output images will stored in a folder named 'topic_output' (e.g. flower_output).
-
-## Code printout
-The experiment.py will generate print out of the metrics for comparison. The format is:
-print('-----------')
-print('image: ', i)
-print('Correct Rate: {:5.2f}'.format(corr_rate))
-print('Average of SAD: {:5.2f}'.format(abs_diff))
-
-Those values are used for evaluation of disparity algorithms, compared to ground truth. Now logging printouts are suppressed. However, both experiment.py and other_images.py can generate logging info from the pymaxflow.fastmin module for debugging purpose, if activates all lines contains 'logging.basicConfig(level=logging.INFO)'.
